@@ -1,0 +1,90 @@
+html, body{
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+	/*background-color:#ffda44;*/
+	color: #6D6848;
+}
+
+p{
+	Font-Family: 'Droid Serif', Serif;
+	Font-Size: 15px;
+}
+
+h1{
+	Font-Family: 'Roboto', Sans-Serif;
+	Font-Size: 35px;
+}
+
+#splashtitle{
+	font-size:2em;
+}
+
+.stdlink{
+	margin-top: 18px;
+}
+
+li{
+	margin-right:10px;
+	margin-left:10px;
+}
+
+#deskmenu{
+	background-color: #ffda44;
+	padding-bottom: 8px;
+	width:100%;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+#splashtitle{
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	height:100%;
+	width:100%;
+}
+
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+#bee{
+	background-image: url("images/hive32.png") no-repeat;
+	transform:rotate(-45deg);
+}
+
+#bee:hover{
+	
+	background-image: url("images/hive32color.png") no-repeat;
+	transition: all .2s ease-in-out;
+}
+
+#splash{
+	height:100%;
+	width:100%;
+	background:url(https://i.redd.it/nerskoqfgzaz.jpg) no-repeat 50% 50%;
+	margin:auto;
+	display:table;
+	top:0;
+	z-index: -1;
+	background-size:cover;
+	/*filter:blur(3px)*/;
+	overflow:hidden;
+}
+
+.stdlink{
+	font-weight: bold;
+}
+
+.stdlink:hover{
+	transition: 0.1s ease-in;
+	font-size:1.1em;
+
+}
