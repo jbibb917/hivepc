@@ -7,47 +7,6 @@ html, body{
 	color: #253039;
 }
 
-#navlist{
-	list-style: none;
-	right:0;
-	display:flex;
-	flex-wrap: wrap;
-	font-size:1.5em;
-	align-items: center;
-	justify-content: center;
-	
-}
-
-#main-nav{
-	background-color:#253039;
-	  color: #fff;
-    display: block;
-    padding: 10px;
-    margin: 0 auto;
-	display: flex;
-	align-items: center;
-	position:fixed;
-	width:100%;
-	color:#ffd600;
-}
-
-/*
-#main-nav::after {
-    content: '';
-    height: 5em;
-    display: block;
-    background-color: inherit;
-    transform: skewY(3deg);
-    transform-origin: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    z-index: -1;
-	box-shadow: 
-}
-*/
-
 . {
 	Font-Family: 'Droid Serif', Serif;
 	Font-Size: 15px;
@@ -57,6 +16,65 @@ h1{
 	Font-Family: 'Roboto', Sans-Serif;
 	Font-Size: 35px;
 }
+
+main{
+	background-color:#e3e4e5;
+	border-left:solid 1px #253039;
+	border-right:solid 1px #253039;
+	
+}
+
+a{
+	position: relative;
+	color: #FFC107;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover{
+	position: relative;
+	color: #FFC107;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+
+#navlist{
+	list-style: none;
+	right:0;
+	display:flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;	
+}
+
+.navli > a {
+  position: relative;
+  color: #FFC107;
+  text-decoration: none;
+}
+
+.navli > a:hover {
+  color: #FFC107;
+	text-decoration:underline;
+}
+
+
+#main-nav{
+	background-color:#253039;
+	  color: #fff;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    padding: 5px;
+    margin: 0 auto;
+	display: flex;
+	align-items: center;
+	position:fixed;
+	width:100%;
+	color:#ffd600;
+}
+
 
 #splashtitle{
 	font-size:2em;
@@ -85,7 +103,11 @@ li{
 	height:100%;
 	width:100%;
 	font-size:2em;
-	color:#253039;
+	color:#e3e4e5;
+	background-image:url(../images/beeblur.png);
+	background-size:cover;
+	text-shadow: 2px 2px 5px #253039;
+	z-index: 2;
 	
 }
 
@@ -143,4 +165,5 @@ li{
 	transition: 0.1s ease-in;
 	font-size:1.1em;
 
+}.navli {
 }
