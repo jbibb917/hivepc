@@ -1,6 +1,5 @@
 <!DOCTYPE html> 
-<header>
-
+<header class="hidden-sm">
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Roboto:300" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -10,70 +9,68 @@
 <!-- link scrollto
 link fontawesome
  -->
-
 </header>
 <body>
 
-<nav class="navbar container navbar-fixed-top">
-	<div>  	
-	    <div  class="collapse navbar-collapse" id='hivenavbar'>
-				<ul id='navmenu' class='nav navbar-nav'>
-					<li id='buildnav' class="stdlink">Build PC</li>
-					<li id='aboutnav' class="stdlink">About us</li>
-						<div class='navbar-header'>
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hivenavbar" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-		      	</button> <!-- button for mobile devices -->
-							<a id="bee" class='navbar-brand' href='#'><div id="bee"></div><!-- <img src='images/hive32.png' alt='bee logo'> --></a> 
-		   		 	</div>
-					<li id='contnav' class="stdlink">Contact us</li>
-					<li id='testinav' class="stdlink">Testimonials</li>
-				</ul>
-			</div>
-	</div>
+<nav class="container" id="main-nav">
+	<ul class="container" id="navlist">
+		
+		<li><a href="#">Build a PC</a></li>
+		<li><a href="#">About Us</a></li>
+		<li><a href="#"><img src="images/smalllogo.png" alt="bee-logo"></a></li>
+		<li><a href="#">Contact Us</a></li>
+		<li><a href="#">Testimonials</a></li>
+	</ul>
 </nav>
 <!-- navbar, use flex or navbar bootstrap
  -->
 
 
 
-<section id='splash'>
-<div id='splashtitle'>
-<img src='images/sidelogo.png' alt='bee logo'/>
-<h1>Build your next </h1>
+<section id="splash">
+	<div id="splashtitle">		
+	<img src="images/sidelogodarker.png" alt="bee logo" class="img-responsive"/>
 
+	<h1 id="buildtitle">Build your next </h1>
 
-	<div id="typed-strings">
-    <p>Typed.js is a <strong>JavaScript</strong> library.</p>
-    <p>It <em>types</em> out sentences.</p>
-</div>
-<span id="typed"></span>
+		<div id="typed-strings">
+		<p>Typed.js is a <strong>JavaScript</strong> library.</p>
+		<p>It <em>types</em> out sentences.</p>
+		</div>
+		<span id="typed"></span>  <!-- attempting to get the type.js working -->
 
-<!-- <h1>get building!</h1> -->
-</div>
+	<!-- <h1>get building!</h1> -->
+	</div>
 </section>
 
 
 <!-- splash - arrow to navigate to about us
  -->
 
-<div id='aboutus'>
-<h1>About us</h1>
+<div class="container" id="aboutus">
+<h1 class="container">About us</h1>
 <br/>
-<p>
-</p>
+<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum vel aut optio repellendus voluptatibus, necessitatibus, unde tenetur, quibusdam nulla voluptate ullam earum placeat quae debitis sapiente, expedita iure neque labore?</P>
 </div><!-- about us  -->
 
-<!-- build pc form, use angular
+<div class="container" id="buildpc">
+<h1 class="container">Build a PC</h1>
+<br/>
+</div><!-- build pc form, use angular
  -->
 
+
+<div class="container" id="testimonials">
+<h1 class="container">What others have said</h1>
+<br/>
+</div>
 <!-- 
 testimonials, use canvas star rating? -->
 
-<!-- contact form
+<div class="container" id="contactus">
+<h1 class="container">Get in touch</h1>
+<br/>
+</div><!-- contact form
  -->
 </body>
 <footer>
