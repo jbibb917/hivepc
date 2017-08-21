@@ -1,81 +1,51 @@
 <!DOCTYPE html> 
-<header class="hidden-sm">
+<header class="hidden-sm" ng-app>
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Roboto:300" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-
 <!-- link scrollto
 link fontawesome
  -->
 </header>
 <body>
 
-<nav class="container" id="main-nav">
-	<ul class="container" id="navlist">
+	<nav class="container" id="main-nav">
+		<ul id="navlist">
+			<li class="navli"><a href="/build">Build a PC</a></li>-
+			<li class="navli"><a href="/about">About Us</a></li>-
+			<li class="navli"><a href="/"><img src="images/hive32color.png" alt="bee-logo"></a></li>-
+			<li class="navli"><a href="/contact">Contact Us</a></li>-
+			<li class="navli"><a href="/inside">Inside our Machines</a></li>
+	  	</ul>
+	</nav>
+
+
+
+<section class="container">
+	
+	<div ng-view class="col-lg-9">
 		
-		<li class="navli"><a href="#">Build a PC</a></li>
-		<li class="navli"><a href="#">About Us</a></li>
-		<li><a href="#"><img src="images/smalllogo.png" alt="bee-logo"></a></li>
-		<li class="navli"><a href="#">Contact Us</a></li>
-		<li class="navli"><a href="#">Testimonials</a></li>
-	</ul>
-</nav>
-<!-- navbar, use flex or navbar bootstrap
- -->
-
-
-
-<section id="splash">
-	<div id="splashtitle">
-<h1 id="buildtitle">Build your next </h1>
-
-		<div id="typed-strings">
-		<p>Typed.js is a <strong>JavaScript</strong> library.</p>
-		<p>It <em>types</em> out sentences.</p>
-		</div>
-		<span id="typed"></span>  <!-- attempting to get the type.js working -->
-
-	<!-- <h1>get building!</h1> -->
+		
 	</div>
+	
+	<aside class="col-lg-3">
+<!--gallery-->
+		
+	</aside>
+	
 </section>
 
 
-<!-- splash - arrow to navigate to about us
- -->
-<main class="container">
-<div class="container" id="aboutus">
-<h1 class="container">About us</h1>
-<br/>
-<P>Lorem ipsum dolor sit amet, consectetur adipisicing <a>elit</a>. Voluptatum vel aut optio repellendus voluptatibus, necessitatibus, unde tenetur, quibusdam nulla voluptate ullam earum placeat quae debitis sapiente, expedita iure neque labore?</P>
-</div><!-- about us  -->
-
-<div class="container" id="buildpc">
-<h1 class="container">Build a PC</h1>
-<br/>
-</div><!-- build pc form, use angular
+<!-- contact form
  -->
 
 
-<div class="container" id="testimonials">
-<h1 class="container">What others have said</h1>
-<br/>
-</div>
-<!-- 
-testimonials, use canvas star rating? -->
 
-<div class="container" id="contactus">
-<h1 class="container">Get in touch</h1>
-<br/>
-</div><!-- contact form
- -->
- </main>
 </body>
 <footer>
 
-<script src="js/common.js"></script>
-<!-- 
-link to the js files -->
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
 
 </footer>
