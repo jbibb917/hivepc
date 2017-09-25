@@ -1,10 +1,72 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
+<!--Bootstrap form styling with angular js for validation and data storage-->
 
-<body>
-</body>
-</html>
+<form name="buildForm" ng-submit"submitform()">
+	<div class="form-group">
+		<label for="GPU"><h2>Graphics Card</h2></label>
+		<select class="form-control" id="gpuselect">
+		  <option>Nvidia 1080</option>
+		  <option>Nvidia 1070</option>
+		  <option>Nvidia 1060</option>
+		  <option>Nvidia 1050</option>
+		</select>
+	</div>  
+  
+	
+	<div class="form-group">
+	<label for="GPU"><h2>CPU</h2></label>
+		<select class="form-control" id="cpuselect">
+		  <option>Intel i7</option>
+		  <option>Intel i5</option>
+		  <option>amd 1</option>
+		  <option>amd 2</option>
+		</select>
+	</div> 
+	
+	<div class="form-group">
+		<label for="GPU"><h2>Motherboard</h2></label>
+		<select class="form-control" id="moboselect">
+		  <option>mobo 2</option>
+		  <option>mobo 1</option>
+		  <option>mobo 3</option>
+		  <option>mobo 4</option>
+		</select>
+	</div> 
+	<label><h2>RAM</h2></label>
+	<div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        16GB
+      </label>
+	</div>
+    <div class="form-check"> 
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" checked>
+        8GB
+      </label>
+      </div>
+      <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" checked>
+        4GB
+      </label>
+	</div>
+    </div>
+   <div class="form-group">
+	   <label for="email"><h2>Email Address</h2></label>
+    <input type="email" class="form-control" id="email"  placeholder="Enter email" data-ng-model="email">
+	</br><small id="emailinfo" class="form-text text-muted">
+  	Your email will not be shared with any other third party 
+	</small>
+    
+    <p data-ng-show="RegistrationForm.email.$pristine" class="help-block">Your email is required</p>
+
+    
+  	</div>
+    
+    
+    <div>
+     <button type="submit" class="btn btn-primary">Fetch me a quote!</button>	
+	</div>
+	
+	
+</form>

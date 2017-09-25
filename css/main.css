@@ -1,9 +1,24 @@
-html, body{
+
+
+html{
 	margin:0;
 	padding:0;
 	height:100%;
 	width:100%;
 	color: #253039;
+}
+
+body{
+	display:flex;
+	flex-direction:column;	
+}
+
+nav, footer{
+	flex-grow:1;
+}
+
+section{
+	flex-grow:3;
 }
 
 * {
@@ -14,6 +29,11 @@ html, body{
 h1, h2 {
 	Font-Family: 'Roboto', Sans-Serif;
 	Font-Size: 35px;
+}
+
+p{
+	word-wrap: break-word;
+	text-overflow: ellipsis;
 }
 
 a{
@@ -37,7 +57,10 @@ p>a:hover{
 	justify-content: center;	
 }
 #main-nav{
-	background-color:#FFC107;
+	background: #FFB75E;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(left, #ED8F03, #FFB75E);
+	background: -o-linear-gradient(left, #ED8F03, #FFB75E);
+	background: linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
 	align-items: center;
 	justify-content: center;
@@ -64,4 +87,35 @@ p>a:hover{
 
 section{
 	background-color:#fff8e1;
+	display:flex;
+}
+
+#content{
+	word-wrap: break-word;
+
+}
+
+main, aside {
+	margin: 10px 0px 10px 0px;
+}
+
+footer{
+	min-height: 57px;
+	background: #FFB75E;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(left, #ED8F03, #FFB75E);
+	background: -o-linear-gradient(left, #ED8F03, #FFB75E);
+	background: linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	flex-flow: 1;
+}
+
+#offerjumbo{
+	background-image: url(../images/cathryn-lavery-67851.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
+	margin-bottom:0;
+	
+}
+
+.reviewcard{
+	display:block;
 }

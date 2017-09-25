@@ -1,51 +1,71 @@
-<!DOCTYPE html> 
-<header class="hidden-sm" ng-app>
-	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<!DOCTYPE html>
+<html ng-app="myApp"> 
+<head class="hidden-sm">
+
+	<!--setting the base url for hosting-->
+	<base href="/">
+	
+
+	<!--  set view port -->
+	<meta name="viewport" content="width=device-width", intial-scale="1.0">
+
+	
+	<!-- link to css files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Roboto:300" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!-- link scrollto
-link fontawesome
- -->
-</header>
-<body>
+	<link rel="stylesheet" type="text/css" href="css/cards.css">
 
+	<!-- link to js files-->
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	
+</head>
+
+<body>
+	<!--all design elements stored together to make best use of flex-grow-->
 	<nav class="container" id="main-nav">
 		<ul id="navlist">
 			<li class="navli"><a href="/build">Build a PC</a></li>-
 			<li class="navli"><a href="/about">About Us</a></li>-
 			<li class="navli"><a href="/"><img src="images/hive32color.png" alt="bee-logo"></a></li>-
 			<li class="navli"><a href="/contact">Contact Us</a></li>-
-			<li class="navli"><a href="/inside">Inside our Machines</a></li>
+			<li class="navli"><a href="/reviews">Testimonials</a></li>
 	  	</ul>
 	</nav>
 
-
-
-<section class="container">
-	
-	<div ng-view class="col-lg-9">
-		
-		
+	<div id="offerjumbo" class="jumbotron jumbotron-fluid container">
+	  <div class="container">
+		<h1 class="display-3">Offers!</h1>
+		<p class="lead">Here the user will see all the offers currently running.</p>
+	  </div>
 	</div>
+
+	<section class="container">
 	
-	<aside class="col-lg-3">
-<!--gallery-->
-		
-	</aside>
+		<!--setting ng-view to display all of my template content-->
+		<main class="col-md-9 container" id="content" ng-view>
+		</main>
+
+		<!--using bootstrap grid to create a sidebar-->
+		<aside class="col-md-3">
+		<!--gallery and other call to action's-->
+			
+
+		</aside>
 	
-</section>
+	</section>
+	
+	<footer class="container">
+	&copy; jbd
+	</footer>
 
-
-<!-- contact form
- -->
-
-
+	<!--link to custom js files-->
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+	
 
 </body>
-<footer>
-
-<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
-<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
-
-</footer>
+</html>	

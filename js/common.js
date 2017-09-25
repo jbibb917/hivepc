@@ -1,24 +1,33 @@
-var myApp = angular.module("myApp", ['ngRoute','RouteControllers']);
+(function() { //for use strict 
+	
+'use strict';	
 
-angular.module('myApp').config(function($locationProvider, $routeProvider) {
-    $locationProvider.html5Mode(true);
+var app = angular.module('myApp', ['ngRoute']);
+	app.config(function($locationProvider, $routeProvider) {
+
+    $locationProvider.html5Mode(true); //to eliminate the # in the url
 	
 	$routeProvider
 	.when('/',{
-		 templateUrl:'templates/about.html',
-		  controller:'AboutController',
+		 templateUrl:'/templates/home.html',
 		})
 	.when('/build',{
-		 templateUrl:'templates/build.html',
-		  controller:'BuildController',
+		 templateUrl:'/templates/build.html',
 		})
 	.when('/contact',{
-		 templateUrl:'templates/contact.html',
-		  controller:'ContactController',
+		 templateUrl:'/templates/contact.html',
 		})
-	.when('/inside',{
-		 templateUrl:'templates/inside.html',
-		  controller:'InsideController',
+	.when('/reviews',{
+		 templateUrl:'/templates/reviews.html',
+		})
+	.when('/about',{
+		 templateUrl:'/templates/about.html',
+		})
+	.otherwise({
+		redirectTo: '/'
 		});
+		
 	
 });
+  
+})();
