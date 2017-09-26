@@ -1,18 +1,20 @@
 <!--used as an example of the controller injecting content onto the page-->
  
-<div class="container" ng-app="myApp" ng-controller="reviewController">
+<div id="reviews" ng-app="myApp" ng-controller="reviewController">
 
  <!--review one	-->
 	 
-	<div class="card reviewcard">
+	<div class="card" style="width: 20rem;">
 	  <img class="card-img-top" src="../images/caspar-rubin-220711.jpg" alt="Card image cap">
 		  <div class="card-block">
 			<h4 class="card-title">John Smith PC</h4>
-			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+			<br>
+			<strong>Contains:</strong></p>
 		  </div>
 		  
 		  <ul class="list-group list-group-flush">
-			<li class="list-group-item">Contains:</li>
+			<li class="list-group-item">32gb RAM</li>
 			<li class="list-group-item">1080</li>
 			<li class="list-group-item">i7</li>
 		  </ul>
@@ -21,15 +23,17 @@
 <!--review two-->
 
 
-	<div class="card reviewcard">
-	  <img class="card-img-top" src="../images/caspar-rubin-220711.jpg" alt="Card image cap">
+	<div class="card" style="width: 20rem;">
+	  <img class="card-img-top" src="../images/splashb.png" alt="Card image cap">
 		  <div class="card-block">
 			<h4 class="card-title">Bob Dole PC</h4>
-			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+			<br>
+			<strong>Contains:</strong></p>
 		  </div>
 		  
 		  <ul class="list-group list-group-flush">
-			<li class="list-group-item">Contains:</li>
+			<li class="list-group-item">16gb RAM</li>
 			<li class="list-group-item">1070</li>
 			<li class="list-group-item">i5</li>
 		  </ul>

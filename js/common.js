@@ -1,7 +1,3 @@
-(function() { //for use strict 
-	
-'use strict';	
-
 var app = angular.module('myApp', ['ngRoute']);
 	app.config(function($locationProvider, $routeProvider) {
 
@@ -29,5 +25,3 @@ var app = angular.module('myApp', ['ngRoute']);
 		
 	
 });
-  
-})();

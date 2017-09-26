@@ -1,3 +1,5 @@
+/*this css file is for the reviews page, the bootstrap would not load the relevant classes which were needed to make the cards work*/
+
 .card {
     position: relative;
     display: -webkit-box;

@@ -1,4 +1,4 @@
-MyApp.controller('contactController',
+app.controller('contactController',
 				 
 	function($scope){
 	

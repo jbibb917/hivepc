@@ -1,4 +1,5 @@
 
+/*Used as a reset to allow for cleaner styling*/
 
 html{
 	margin:0;
@@ -60,7 +61,7 @@ p>a:hover{
 	background: #FFB75E;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(left, #ED8F03, #FFB75E);
 	background: -o-linear-gradient(left, #ED8F03, #FFB75E);
-	background: linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to right, #ED8F03, #FFB75E); 
     display: flex;
 	align-items: center;
 	justify-content: center;
@@ -74,6 +75,7 @@ p>a:hover{
 	margin:5px 10px 0px 10px;
 }
 
+/*used to show use of different types of selectors*/
 .navli > a {
   position: relative;
   color: black;
@@ -116,6 +118,12 @@ footer{
 	
 }
 
-.reviewcard{
-	display:block;
+#reviews{
+	display:flex;
+	flex-direction:row;
+}
+
+/*used to exemplify short hand css*/
+.card{
+	margin: 5px 5px;
 }
