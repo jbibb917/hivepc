@@ -3,39 +3,22 @@
 <div id="reviews" ng-app="myApp" ng-controller="reviewController">
 
  <!--review one	-->
-	 
-	<div class="card" style="width: 20rem;">
-	  <img class="card-img-top" src="../images/caspar-rubin-220711.jpg" alt="Card image cap">
-		  <div class="card-block">
-			<h4 class="card-title">John Smith PC</h4>
-			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-			<br>
-			<strong>Contains:</strong></p>
-		  </div>
-		  
-		  <ul class="list-group list-group-flush">
-			<li class="list-group-item">32gb RAM</li>
-			<li class="list-group-item">1080</li>
-			<li class="list-group-item">i7</li>
-		  </ul>
-	</div>
 	
-<!--review two-->
-
-
-	<div class="card" style="width: 20rem;">
-	  <img class="card-img-top" src="../images/splashb.png" alt="Card image cap">
+	<div class="card"  ng-repeat="review in reviews">
+	  <img class="card-img-top" ng-src="{{ review.cover }}" alt="Card image cap">
 		  <div class="card-block">
-			<h4 class="card-title">Bob Dole PC</h4>
-			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+			<h4 class="card-title">{{ review.name }}</h4>
+			<p class="card-text">{{ review.overview }}
 			<br>
 			<strong>Contains:</strong></p>
 		  </div>
 		  
 		  <ul class="list-group list-group-flush">
-			<li class="list-group-item">16gb RAM</li>
-			<li class="list-group-item">1070</li>
-			<li class="list-group-item">i5</li>
+			<li class="list-group-item">{{ review.GPU }}</li>
+			<li class="list-group-item">{{ review.CPU }}</li>
+			<li class="list-group-item">{{ review.RAM }}</li>
+			<li class="list-group-item">{{ review.Cooler }}</li>
+			<li class="list-group-item">{{ review.Case }}</li>
 		  </ul>
 	</div>
 	

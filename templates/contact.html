@@ -32,10 +32,23 @@
 	<!--This is a form of validation that will return the boolean value of true if the cell is left empty. This interacts with ng-show to reveal (or hide) the <p> tag	-->
 	</div>
 	
+	
+	<!--Phone Number-->
+	
+	<div class="form-group" ng-class="{ 'has-error' : registrationForm.phonenumber.$invalid && !registrationForm.phonenumber.$pristine}">
+		
+	<label for="phonenumber"><h2>Phone Number</h2></label>
+	
+	<input type="text" name="phonenumber" data-ng-model="user.phonenumber" class="form-control" id="phonenumber" placeholder="Enter Phone Number" required>
+	
+	<p data-ng-show="registrationForm.phonenumber.$pristine" class="help-block">Your phone number is required</p>
+	
+	<!--This is a form of validation that will return the boolean value of true if the cell is left empty. This interacts with ng-show to reveal (or hide) the <p> tag	-->
+	</div>
+	
 	<!--Email Address-->
 	
-	<div class="form-group" ng-class="{'has-error : registrationForm.email.$invalid && !registrationForm.email.$pristine}">
-   
+	<div class="form-group" ng-class="{'has-error' : registrationForm.email.$invalid && !registrationForm.email.$pristine}">
    
     <label for="email"><h2>Email Address</h2></label>
     <input type="email" name="email" data-ng-model="user.email" class="form-control" id="email"  placeholder="Enter Email" >

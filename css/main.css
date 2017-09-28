@@ -120,7 +120,8 @@ footer{
 
 #reviews{
 	display:flex;
-	flex-direction:row;
+	flex-direction:column;
+	flex-grow:1;
 }
 
 /*used to exemplify short hand css*/
