@@ -12,7 +12,7 @@ app.controller('reviewController', ['$scope', function($scope){
 
 	$scope.reviews = [
 	{
-	name: 'John Smith',
+	name: 'Ringo Lennon',
 	overview: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
 	GPU:'Nvidia GeForce 1070',
 	CPU:'Intel i7',
@@ -22,7 +22,7 @@ app.controller('reviewController', ['$scope', function($scope){
 	cover:'../images/caspar-rubin-220711.jpg'
 	},
 	{
-	name: 'Paul Harrison',
+	name: 'John McCartney',
 	overview: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
 	GPU:'Nvidia GeForce 980ti',
 	CPU:'Intel i5',
@@ -42,7 +42,7 @@ app.controller('reviewController', ['$scope', function($scope){
 	cover:'../images/caspar-rubin-220711.jpg'
 	},	
 	{
-	name: 'Super Duper',
+	name: 'George Starr',
 	overview: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
 	GPU:'Nvidia GeForce 980ti',
 	CPU:'Intel i5',
@@ -64,3 +64,15 @@ app.controller('reviewController', ['$scope', function($scope){
 	
 	];	
 }]);
+
+app.controller ('buildController', function($scope){
+
+});
+
+app.controller('mapController', function(NgMap) {
+  NgMap.getMap().then(function(map) {
+    console.log(map.getCenter());
+    console.log('markers', map.markers);
+    console.log('shapes', map.shapes);
+  });
+});

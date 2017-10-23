@@ -58,17 +58,29 @@ p>a:hover{
 	justify-content: center;	
 }
 #main-nav{
-	background: #FFB75E;  /* fallback for old browsers */
+	background: #FFB75E;
 	background: -webkit-linear-gradient(left, #ED8F03, #FFB75E);
 	background: -o-linear-gradient(left, #ED8F03, #FFB75E);
-	background: linear-gradient(to right, #ED8F03, #FFB75E); 
-    display: flex;
-	align-items: center;
-	justify-content: center;
-    padding: 5px;
-    margin: 0 auto;
-	align-items: center;
-	color:black;
+	background: linear-gradient(to right, #ED8F03, #FFB75E);
+}
+
+@media (min-width: 768px){
+    .navbar-nav{
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
 }
 
 .navli{
@@ -118,13 +130,17 @@ footer{
 	
 }
 
-#reviews{
-	display:flex;
-	flex-direction:column;
-	flex-grow:1;
+.card{
+	margin: 0;
+	width: 20rem;
 }
 
-/*used to exemplify short hand css*/
-.card{
-	margin: 5px 5px;
+.card-image-top{
+	height:15rem;
 }
+
+#map {
+        height: 400px;
+        width: 100%;
+}
+

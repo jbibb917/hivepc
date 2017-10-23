@@ -23,5 +23,6 @@ var app = angular.module('myApp', ['ngRoute']);
 		redirectTo: '/'
 		});
 		
-	
+	angular.module('myApp', ['ngMap']);
+		
 });

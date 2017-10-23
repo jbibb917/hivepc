@@ -11,31 +11,52 @@
 
 	
 	<!-- link to css files -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"
 	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Roboto:300" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/cards.css">
 
 	<!-- link to js files-->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="/bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+	<script src="http://maps.google.com/maps/api/js"></script>
+	
 	
 	
 </head>
 
 <body>
-	<!--all design elements stored together to make best use of flex-grow-->
-	<nav class="container" id="main-nav">
-		<ul id="navlist">
-			<li class="navli"><a href="/build">Build a PC</a></li>-
-			<li class="navli"><a href="/about">About Us</a></li>-
-			<li class="navli"><a href="/"><img src="images/hive32color.png" alt="bee-logo"></a></li>-
-			<li class="navli"><a href="/contact">Contact Us</a></li>-
-			<li class="navli"><a href="/reviews">Testimonials</a></li>
-	  	</ul>
-	</nav>
+	
+
+	
+	
+<div class="navbar navbar-inverse navbar-static-top" id="main-nav">
+	<div class="container">
+		
+		<a href="/" class="navbar-brand"><img src="images/hive32color.png" alt="bee-logo"></a>
+		
+		<button class="navbar-toggle" data-toggle="collapse" data-taget=".navHeaderCollapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		
+		<div class="collapse navbar-collapse navHeaderCollapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/build">Build a PC</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+				<li><a href="/reviews">Testimonials</a></li>	
+			</ul>
+		</div>
+		
+	</div>
+</div>
 
 	<div id="offerjumbo" class="jumbotron jumbotron-fluid container">
 	  <div class="container">
@@ -47,19 +68,21 @@
 	<section class="container">
 	
 		<!--setting ng-view to display all of my template content-->
-		<main class="col-md-12 container" id="content" ng-view>
+		<main class=" col-xs-12 col-sm-12 col-md-9 container" id="content" ng-view>
 		</main>
 
+		<aside class="col-md-3 hidden-sm-down">
+		<h3>Tech News</h3>
+		<div id="techNews"></div>
+		</aside>
 	
 	</section>
 	
-	<footer class="container">
-	&copy; jbd
-	</footer>
 
 	<!--link to custom js files-->
 	<script type="text/javascript" src="js/common.js"></script>
 	<script type="text/javascript" src="js/controller.js"></script>
+	
 	
 
 </body>
