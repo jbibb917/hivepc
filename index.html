@@ -31,10 +31,10 @@
 
 <body>
 	
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="main-nav">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+    <div class="navbar-header container">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -75,9 +75,9 @@
 		</div>
 	</div>
 	<div class="row">
-		<div id="home-banner">
-			<main class="col-xs-9" id="content" ng-view></main>
-			<aside class="col-md-3 hidden-sm-down">
+		<div>
+			<main class="col-xs-9 container home-banner" id="content" ng-view></main>
+			<aside class="col-md-3 hidden-sm-down home-banner">
 				<h3>Tech News</h3>
 				<div id="techNews"></div>
 			</aside>
@@ -89,6 +89,8 @@
 	<!--link to custom js files-->
 	<script type="text/javascript" src="js/common.js"></script>
 	<script type="text/javascript" src="js/controller.js"></script>
+	<script type="text/javascript" src="js/buildcontroller.js"></script>
+	<script type="text/javascript" src="js/mapcontroller.js"></script>
 	
 	
 

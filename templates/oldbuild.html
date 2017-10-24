@@ -1,0 +1,97 @@
+<!--Bootstrap form styling with angular js for validation and data storage-->
+<h2>Build your PC</h2>
+
+<form name="buildForm" ng-submit="buildSubmit()" ng-app>
+	<div class="form-group" ng-controller="buildController">
+		<label for="GPU"><h3>Graphics Card</h3></label>
+		<select class="form-control" id="gpuSelect" ng-model="gpuSelect">
+		  <option value="1080" ng-value="10" ng-model="gpuSelect">Nvidia 1080</option>
+		  <option value="1070" ng-value="20" ng-model="gpuSelect">Nvidia 1070</option>
+		  <option value="1060" ng-value="300" ng-model="gpuSelect">Nvidia 1060</option>
+		  <option value="1050" ng-value="40" ng-model="gpuSelect">Nvidia 1050</option>
+		</select>
+		
+	
+		<img ng-src="#" ng-show="gpuSelect == '1080'">
+		<img ng-src="#" ng-show="gpuSelect == '1070'">
+		<img ng-src="#" ng-show="gpuSelect == '1060'">
+		<img ng-src="../images/color16.png" ng-show="gpuSelect == '1050'">
+	</div>  
+  
+	
+	<div class="form-group">
+	<label for="GPU"><h3>CPU</h3></label>
+		<select class="form-control" id="cpuselect" ng-model="cpuSelect">
+		  <option value="i7" ng-value="100" ng-model="cpuSelect">Intel i7</option>
+		  <option value="i5" ng-value="100" ng-model="cpuSelect">Intel i5</option>
+		  <option value="a1" ng-value="100" ng-model="cpuSelect">amd 1</option>
+		  <option value="a2" ng-value="100" ng-model="cpuSelect">amd 2</option>
+		</select>
+		
+		<!--Angular validation that shows a picture of the part selected-->
+		<img ng-src="#" ng-show="cpuSelect == 'i7'">
+		<img ng-src="#" ng-show="cpuSelect == 'i5'">
+		<img ng-src="#" ng-show="cpuSelect == 'a1'">
+		<img ng-src="../images/hive16.png" ng-show="cpuSelect == 'a2'">
+		
+	</div> 
+	
+	<div class="form-group">
+		<label for="GPU"><h3>Motherboard</h3></label>
+		<select class="form-control" id="moboSelect" ng-model="moboSelect">
+		  <option value="m1" ng-value="100" ng-model="moboSelect">mobo 1</option>
+		  <option value="m2" ng-value="110" ng-model="moboSelect">mobo 2</option>
+		  <option value="m3" ng-value="120" ng-model="moboSelect">mobo 3</option>
+		  <option value="m4" ng-value="130" ng-model="moboSelect">mobo 4</option>
+		</select>
+		
+		<!--Angular validation that shows a picture of the part selected-->
+		<img ng-src="#" ng-show="moboSelect == 'm1'">
+		<img ng-src="#" ng-show="moboSelect == 'm2'">
+		<img ng-src="#" ng-show="moboSelect == 'm3'">
+		<img ng-src="../images/hive16.png" ng-show="moboSelect == 'm4'">
+		
+	</div> 
+	<label><h2>RAM</h2></label>
+	<div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="16gb" ng-value="100" checked ng-model="ramSelect">
+        16GB
+      </label>
+	</div>
+    <div class="form-check"> 
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="8gb" ng-value="100" ng-model="ramSelect" checked>
+        8GB
+      </label>
+      </div>
+      <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="4gb" ng-value="100" ng-model="ramSelect" checked>
+        4GB
+      </label>
+	</div>
+    <img ng-src="#" ng-show="ramSelect == '16gb'">
+	<img ng-src="#" ng-show="ramSelect == '8gb'">
+	<img ng-src="../images/hive16.png" ng-show="ramSelect == '4gb'">
+
+    
+   <div class="form-group">
+	   <label for="email"><h3>Email Address</h3></label>
+    <input type="email" class="form-control" id="email"  placeholder="Enter email" data-ng-model="email">
+	</br><small id="emailinfo" class="form-text text-muted">
+  	Your email will not be shared with any other third party 
+	</small>
+    
+    <p data-ng-show="RegistrationForm.email.$pristine" class="help-block">Your email is required</p>
+
+    
+  	</div>
+    
+    
+    <div>
+     <button type="submit" class="btn btn-primary">Fetch me a quote!</button>	
+	</div>
+	
+	
+</form>

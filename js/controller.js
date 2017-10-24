@@ -19,7 +19,7 @@ app.controller('reviewController', ['$scope', function($scope){
 	RAM:'16gb',
 	Cooler:'Coolermaster Seidon v2',
 	Case:'NZXT h440',
-	cover:'../images/caspar-rubin-220711.jpg'
+	cover:'../images/scores/3210-10.png'
 	},
 	{
 	name: 'John McCartney',
@@ -29,7 +29,7 @@ app.controller('reviewController', ['$scope', function($scope){
 	RAM:'16gb',
 	Cooler:'Coolermaster Seidon v2',
 	Case:'NZXT h440',
-	cover:'../images/caspar-rubin-220711.jpg'
+	cover:'../images/scores/323-10.png'
 	},
 	{
 	name: 'Paul Harrison',
@@ -39,7 +39,7 @@ app.controller('reviewController', ['$scope', function($scope){
 	RAM:'16gb',
 	Cooler:'Coolermaster Seidon v2',
 	Case:'NZXT h440',
-	cover:'../images/caspar-rubin-220711.jpg'
+	cover:'../images/scores/327-10.png'
 	},	
 	{
 	name: 'George Starr',
@@ -49,7 +49,7 @@ app.controller('reviewController', ['$scope', function($scope){
 	RAM:'16gb',
 	Cooler:'Coolermaster Seidon v2',
 	Case:'NZXT h440',
-	cover:'../images/caspar-rubin-220711.jpg'
+	cover:'../images/scores/324-10.png'
 	},	
 	{
 	name: 'Grag Davis',
@@ -59,28 +59,11 @@ app.controller('reviewController', ['$scope', function($scope){
 	RAM:'16gb',
 	Cooler:'Coolermaster Seidon v2',
 	Case:'NZXT h440',
-	cover:'../images/caspar-rubin-220711.jpg'
+	cover:'../images/scores/329-10.png'
 	},	
 	
 	];	
 }]);
+	
 
-app.controller ('buildController', function($scope){
 
-	$scope.sum = function(){
-		gpuSelect.value+cpuSelect.value+moboSelect.value+ramSelect.value
-	};
-	$scope.buildForm = function(){
-		if($scope.registrationForm.$valid){
-		alert('Your quote comes to {{ sum }}');
-	}
-	};
-});
-
-app.controller('mapController', function(NgMap) {
-  NgMap.getMap().then(function(map) {
-    console.log(map.getCenter());
-    console.log('markers', map.markers);
-    console.log('shapes', map.shapes);
-  });
-});
