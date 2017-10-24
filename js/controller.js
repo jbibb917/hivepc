@@ -67,6 +67,14 @@ app.controller('reviewController', ['$scope', function($scope){
 
 app.controller ('buildController', function($scope){
 
+	$scope.sum = function(){
+		gpuSelect.value+cpuSelect.value+moboSelect.value+ramSelect.value
+	};
+	$scope.buildForm = function(){
+		if($scope.registrationForm.$valid){
+		alert('Your quote comes to {{ sum }}');
+	}
+	};
 });
 
 app.controller('mapController', function(NgMap) {

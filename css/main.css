@@ -7,6 +7,8 @@ html{
 	height:100%;
 	width:100%;
 	color: #253039;
+	Font-Family: 'Roboto', Sans-Serif;
+	Font-Size: 15px;
 }
 
 body{
@@ -18,10 +20,7 @@ nav, footer{
 	flex-grow:1;
 }
 
-* {
-	Font-Family: 'Roboto', Sans-Serif;
-	Font-Size: 15px;
-}
+
 
 h1, h2 {
 	Font-Family: 'Roboto', Sans-Serif;
@@ -139,3 +138,15 @@ footer{
         width: 100%;
 }
 
+@media (min-width: 768px){
+    .navbar-nav{
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+}
+
+.landing-blurb{
+	min-height: 300px;
+}

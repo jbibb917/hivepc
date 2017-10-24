@@ -1,14 +1,14 @@
 <!--Bootstrap form styling with angular js for validation and data storage-->
 <h2>Build your PC</h2>
 
-<form name="buildForm" ng-submit"submitform()" ng-app>
+<form name="buildForm" ng-submit="buildSubmit()" ng-app>
 	<div class="form-group" ng-controller="buildController">
 		<label for="GPU"><h3>Graphics Card</h3></label>
 		<select class="form-control" id="gpuSelect" ng-model="gpuSelect">
-		  <option value="1080" ng-model="gpuSelect">Nvidia 1080</option>
-		  <option value="1070" ng-model="gpuSelect">Nvidia 1070</option>
-		  <option value="1060" ng-model="gpuSelect">Nvidia 1060</option>
-		  <option value="1050" ng-model="gpuSelect">Nvidia 1050</option>
+		  <option value="1080" ng-value="10" ng-model="gpuSelect">Nvidia 1080</option>
+		  <option value="1070" ng-value="20" ng-model="gpuSelect">Nvidia 1070</option>
+		  <option value="1060" ng-value="300" ng-model="gpuSelect">Nvidia 1060</option>
+		  <option value="1050" ng-value="40" ng-model="gpuSelect">Nvidia 1050</option>
 		</select>
 		
 	
@@ -22,10 +22,10 @@
 	<div class="form-group">
 	<label for="GPU"><h3>CPU</h3></label>
 		<select class="form-control" id="cpuselect" ng-model="cpuSelect">
-		  <option value="i7" ng-model="cpuSelect">Intel i7</option>
-		  <option value="i5" ng-model="cpuSelect">Intel i5</option>
-		  <option value="a1" ng-model="cpuSelect">amd 1</option>
-		  <option value="a2" ng-model="cpuSelect">amd 2</option>
+		  <option value="i7" ng-value="100" ng-model="cpuSelect">Intel i7</option>
+		  <option value="i5" ng-value="100" ng-model="cpuSelect">Intel i5</option>
+		  <option value="a1" ng-value="100" ng-model="cpuSelect">amd 1</option>
+		  <option value="a2" ng-value="100" ng-model="cpuSelect">amd 2</option>
 		</select>
 		
 		<!--Angular validation that shows a picture of the part selected-->
@@ -39,10 +39,10 @@
 	<div class="form-group">
 		<label for="GPU"><h3>Motherboard</h3></label>
 		<select class="form-control" id="moboSelect" ng-model="moboSelect">
-		  <option value="m1" ng-model="moboSelect">mobo 1</option>
-		  <option value="m2" ng-model="moboSelect">mobo 2</option>
-		  <option value="m3" ng-model="moboSelect">mobo 3</option>
-		  <option value="m4" ng-model="moboSelect">mobo 4</option>
+		  <option value="m1" ng-value="100" ng-model="moboSelect">mobo 1</option>
+		  <option value="m2" ng-value="110" ng-model="moboSelect">mobo 2</option>
+		  <option value="m3" ng-value="120" ng-model="moboSelect">mobo 3</option>
+		  <option value="m4" ng-value="130" ng-model="moboSelect">mobo 4</option>
 		</select>
 		
 		<!--Angular validation that shows a picture of the part selected-->
@@ -55,19 +55,19 @@
 	<label><h2>RAM</h2></label>
 	<div class="form-check">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="16gb" checked ng-model="ramSelect">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="16gb" ng-value="100" checked ng-model="ramSelect">
         16GB
       </label>
 	</div>
     <div class="form-check"> 
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="8gb" ng-model="ramSelect" checked>
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="8gb" ng-value="100" ng-model="ramSelect" checked>
         8GB
       </label>
       </div>
       <div class="form-check">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="4gb" ng-model="ramSelect" checked>
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="4gb" ng-value="100" ng-model="ramSelect" checked>
         4GB
       </label>
 	</div>
