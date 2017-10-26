@@ -6,11 +6,11 @@
         <div ng-repeat="component in components">
             <label><h3>{{ component.compName }}</h3></label>
                 <select class="form-control" id="{{ component.selectName }}" ng-model="component.selectedPart">
-                    <option ng-repeat="part in component.parts" value="{{ part.partID }}">{{ part.partName }}</option>
+                    <option ng-repeat="part in component.parts" value="{{ part.partCost }}">{{ part.partName }}</option>
                 </select>
         </div>
         <div>
-        	<h3>Total Cost: £{{}}</h3>
+        	<button class="btn btn-primary btn-s" id="quotebtn" value="show">Your Quote</button>
         </div>
 
         <div class="col-md-6">

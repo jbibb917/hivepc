@@ -16,7 +16,8 @@ html{
 
 body{
 	display:flex;
-	flex-direction:column;	
+	flex-direction:column;
+	background-image:url("/images/traffic.jpg");
 }
 
 nav, footer{
@@ -29,6 +30,8 @@ h1, h2 {
 	font-family: 'Roboto', Sans-Serif;
 	font-size: 35px;
 }
+
+
 
 p{
 	word-wrap: break-word;
@@ -59,7 +62,7 @@ p>a:hover{
 	align-items: center;
 	justify-content: center;	
 }
-#main-nav, .btn-primary{
+.btn-primary, .navlink:hover, .dropdown-menu>li>a:hover, a:focus, a:active{
 	background: #FFB75E;
 	background: -webkit-linear-gradient(left, #ED8F03, #FFB75E);
 	background: -o-linear-gradient(left, #ED8F03, #FFB75E);
@@ -67,22 +70,19 @@ p>a:hover{
 	border-color: #FFB75E;
 }
 
-.btn-primary:hover{
-	border-color:black;
-	color:black;
+.btn-primary.focus, .btn-primary:focus, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle{
+    border-color: #ddd;
+	background: #FFB75E;
+	background: -webkit-linear-gradient(left, #ED8F03, #FFB75E);
+	background: -o-linear-gradient(left, #ED8F03, #FFB75E);
+	background: linear-gradient(to right, #ED8F03, #FFB75E);
+	border-color: #FFB75E;
+	border-style: solid 3px;
 }
 
-
-
-@media (min-width: 768px){
-    .navbar-nav{
-        float:none;
-        margin: 0 auto;
-        display: table;
-        table-layout: fixed;
-    }
+#main-nav{
+	background-color:white;
 }
-
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
@@ -109,8 +109,49 @@ p>a:hover{
 	text-decoration:underline;
 }
 
-#home-banner{
-	background-color:grey;
+@media (min-width: 768px){
+    .navbar-nav{
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+}
+
+@media (min-width: 768px){
+    .navbar-nav{
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #193226;
+}
+.navbar, .navbar-default{
+	margin-bottom: 0px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+h1,h2,hr{
+	color: #FFB75E;
+	color: -webkit-linear-gradient(left, #ED8F03, #FFB75E);
+	color: -o-linear-gradient(left, #ED8F03, #FFB75E);
+	color: linear-gradient(to right, #ED8F03, #FFB75E);
+	font-weight: bold;
+}
+
+.btn-primary:hover{
+	border-color:black;
+	color:black;
+}
+
+hr{
+	border-style: solid 3px;
 }
 
 #content{
@@ -122,13 +163,13 @@ main, aside {
 	margin: 10px 0px 10px 0px;
 }
 
-#offerjumbo{
+/*#offerjumbo{
 	background-image: url(../images/cathryn-lavery-67851.jpg);
 	background-size:cover;
 	background-repeat: no-repeat;
 	margin-bottom:0;
 	
-}
+}*/
 
 .card{
 	margin: 0;
@@ -144,15 +185,6 @@ main, aside {
 #map {
         height: 400px;
         width: 100%;
-}
-
-@media (min-width: 768px){
-    .navbar-nav{
-        float:none;
-        margin: 0 auto;
-        display: table;
-        table-layout: fixed;
-    }
 }
 
 .landing-blurb{
@@ -175,11 +207,28 @@ main, aside {
 
 }
 
-.navbar .navbar-nav {
-    display: inline-block;
-    float: none;
+#quotebtn{
+	margin-top: 40px;
 }
 
-.navbar .navbar-collapse {
-    text-align: center;
+.battlestation{
+	max-height: 125px;
+	max-width: 100px;
+}
+
+#main-div{
+	background-color:#f8f8f8;
+	border-radius: 
+}
+
+#containerdiv{
+	height:100vh;
+} /* to make the main div stretch the entire page */
+
+.cartext{
+	text-shadow: 2px 2px 4px #000000
+} /* to increase readability on the carousel*/
+
+.homeblurb{
+	height:125px;
 }
