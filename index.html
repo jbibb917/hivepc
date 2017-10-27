@@ -90,16 +90,25 @@
 		          </div>
 		        </div>
 		      </div>
-		      <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-		      <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+		      <a class="left carousel-control" data-target="#myCarousel" data-slide="prev">‹</a>
+		      <a class="right carousel-control" data-target="#myCarousel" data-slide="next">›</a>
 		    </div>
 		</div>
 		<div class="row">
 			<div>
 				<main class="col-xs-9 container home-banner" id="content" ng-view></main>
-				<aside class="col-md-3 hidden-sm hidden-xs home-banner">
-					<h2>Tech News</h2>
-					<div id="techNews">{{ news }}</div>
+				<aside class="col-md-3 hidden-sm hidden-xs home-banner" ng-controller="newscontroller">
+					<h2 id="techheader">Tech News</h2><!-- <img id="polylogo" src="/images/polygonlogo.png"> -->
+					<div id="techNews"  ng-repeat="article in news.articles|limitTo:3">
+						<img class="techimg" src="{{ article.urlToImage }}">
+						<a id="techa" href="{{ article.url }}"<h3>{{ article.title }}</h3></a>
+						<p>{{ article.description }}</p>
+						<small id="techsmall">{{ article.author }}</small>
+						<hr class="techhr">
+					</div>
+
+					</div>
+
 				</aside>
 			</div>
 		</div>
@@ -112,7 +121,9 @@
 	<script type="text/javascript" src="js/controller.js"></script>
 	<script type="text/javascript" src="js/buildcontroller.js"></script>
 	<script type="text/javascript" src="js/mapcontroller.js"></script>
+	<script type="text/javascript" src="js/newscontroller.js"></script>
 	<script type="text/javascript" src="js/sumJQ.js"></script>
+
 
 	
 	

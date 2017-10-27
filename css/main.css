@@ -97,18 +97,6 @@ p>a:hover{
 	margin:5px 10px 0px 10px;
 }
 
-/*used to show use of different types of selectors*/
-.navli > a {
-  position: relative;
-  color: black;
-  text-decoration: none;
-}
-
-.navli > a:hover {
-  color: black;
-	text-decoration:underline;
-}
-
 @media (min-width: 768px){
     .navbar-nav{
         float:none;
@@ -231,4 +219,40 @@ main, aside {
 
 .homeblurb{
 	height:125px;
+}
+
+#technews{
+	margin-bottom: 20px;
+}
+
+#techa, #techsmall {
+	color: #FFB75E;
+
+}
+
+#techa:active{
+	background: #000000;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#techsmall{
+	font-weight: bold;
+}
+
+.techimg{
+	max-width: 225px;
+	max-height: 135px;
+}
+
+
+#polylogo{
+	max-height: 25px;
+	max-width: 25px;
+}
+
+#techhr{
+	border-color: black;
+	border-width: 2px;
 }
